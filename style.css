@@ -1,0 +1,317 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	/* flex */
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#cuerpo {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	background: lightgray;
+}
+
+header {
+	background: #460C68;
+	width: 100%;
+	padding: 30px;
+	/* flex */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+header #logo {
+	/* display: inline; */
+	/* color: #ffff; */
+	font-size: 30px;
+}
+
+header #logo img {
+	border-radius: 30px;
+	width: 50px;
+	vertical-align: top;
+}
+
+/* #logo {
+	padding: 0px 0px 0px 0px;
+} */
+
+header #logo a {
+	color: #ffff;
+	text-decoration: none;
+	line-height: 50px;
+}
+
+header #menu {
+	width: 50%;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border-radius: 30px;
+}
+
+#lista {
+	margin: auto;
+	/* flex */
+	display: flex;
+	line-height: 2.5;
+	list-style: none;
+}
+
+header #menu a {
+	background: #CB1C8D;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px;
+	/* flex */
+	flex-grow: 1;
+}
+
+header #menu a:hover {
+	background: #F56EB3;
+}
+
+#menu {
+	border-radius: 30px;
+}
+
+.principal {
+	background: #fff;
+	color: #000;
+	padding: 20px;
+	flex: 1 1 70%;
+	/*flex:1;*/
+}
+
+.principal article {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #000;
+}
+
+.principal article:nth-last-child(1) {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+aside {
+	background: #7F167F;
+	padding: 20px;
+	/*flex*/
+	flex: 1 1 30%;
+	/*flex:0 0 300px;*/
+	align-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+}
+
+aside .img-class {
+	background: #7F167F;
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+}
+
+aside .img-class img {
+	border-radius: 250px;
+}
+
+footer {
+	background: #460C68;
+	width: 100%;
+	padding: 20px;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .links {
+	background: #CB1C8D;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 20px;
+}
+
+footer .links a {
+	/* flex */
+	flex-grow: 1;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 30px;
+}
+
+footer .links a:hover {
+	background: #F56EB3;
+}
+
+footer .social {
+	border-radius: 20px;
+	background: #CB1C8D;
+}
+
+footer .social a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+}
+
+#mostrar {
+	width: 20px;
+	height: 20px;
+	border: solid;
+	display: none;
+	text-align: center;
+	background: #ffff;
+}
+
+#mostrar:hover .ocultar {
+	display: flex;
+	background: #F56EB3;
+	flex-direction: column;
+}
+
+/* 
+nav:hover>a{
+	display: flex;
+} */
+
+/*Media queries*/
+
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction: column;
+	}
+
+	header {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	#lista {
+		line-height: 2.5;
+		list-style: none;
+		overflow: hidden;
+	}
+
+	header #logo {
+		margin: 10px 0;
+	}
+
+	/* header #logo img {
+		display: inline;
+	} */
+
+	aside {
+		/* flex */
+		flex-direction: row;
+		flex: 0;
+	}
+
+	aside .img-class {
+		flex-grow: 1;
+	}
+
+	.ocultar {
+		display: none;
+	}
+
+	#mostrar {
+		display: flex;
+	}
+
+	/* nav a{
+		display: none;
+	} */
+	nav #menu:hover {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	#cuerpo {
+		font-size: 15px;
+	}
+
+	aside {
+		flex-direction: column;
+	}
+
+	div #logo {
+		width: 50%;
+	}
+
+	header {
+		padding: 30px 10px 10px 10px;
+		margin: 10px 10px 10px 10px;
+	}
+
+	header #logo img {
+		border-radius: 30px;
+		width: 50px;
+		display: list-item;
+	}
+
+	header #menu {
+		width: 50%;
+		/* flex */
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: stretch;
+	}
+
+	#lista {
+		/* flex */
+		display: flex;
+		width: 100%;
+		display: list-item;
+		line-height: 3.5;
+		list-style: none;
+		cursor: pointer;
+		padding-bottom: 10px;
+		overflow: hidden;
+	}
+
+	#lista li a {
+		display: flex;
+	}
+
+	div #mostrar {
+		display: flex;
+		text-align: center;
+		margin: 10px 10px 10px 10px;
+	}
+
+	#lista a:hover {
+		display: block !important;
+	}
+
+	#lista:hover>a {
+		display: flex;
+	}
+
+	footer {
+		justify-content: space-around;
+	}
+}
