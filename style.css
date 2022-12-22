@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+#cuerpo {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	background: lightgray;
+}
+
+
 .contenedor {
 	width: 100%;
 	max-width: 1000px;
@@ -13,11 +20,6 @@
 	flex-flow: row wrap;
 }
 
-#cuerpo {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 22px;
-	background: lightgray;
-}
 
 header {
 	background: #460C68;
@@ -42,10 +44,6 @@ header #logo img {
 	width: 50px;
 	vertical-align: top;
 }
-
-/* #logo {
-	padding: 0px 0px 0px 0px;
-} */
 
 header #logo a {
 	color: #ffff;
@@ -191,6 +189,123 @@ footer .social a {
 	flex-direction: column;
 }
 
+
+.contenedor {
+	flex-direction: column;
+}
+
+header {
+	flex-direction: column;
+	padding: 0;
+}
+
+#lista {
+	line-height: 2.5;
+	list-style: none;
+	overflow: hidden;
+}
+
+header #logo {
+	margin: 10px 0;
+}
+
+/* header #logo img {
+	display: inline;
+} */
+
+aside {
+	/* flex */
+	flex-direction: row;
+	flex: 0;
+}
+
+aside .img-class {
+	flex-grow: 1;
+}
+
+.ocultar {
+	display: none;
+}
+
+#mostrar {
+	display: flex;
+}
+
+/* nav a{
+	display: none;
+} */
+nav #menu:hover {
+	display: none;
+}
+
+
+/**/
+
+#cuerpo {
+	font-size: 15px;
+}
+
+aside {
+	flex-direction: column;
+}
+
+div #logo {
+	width: 50%;
+}
+
+header {
+	padding: 30px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
+}
+
+header #logo img {
+	border-radius: 30px;
+	width: 50px;
+	display: list-item;
+}
+
+header #menu {
+	width: 50%;
+	/* flex */
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+
+#lista {
+	/* flex */
+	display: flex;
+	width: 100%;
+	display: list-item;
+	line-height: 3.5;
+	list-style: none;
+	cursor: pointer;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+#lista li a {
+	display: flex;
+}
+
+div #mostrar {
+	display: flex;
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+}
+
+#lista a:hover {
+	display: block !important;
+}
+
+#lista:hover>a {
+	display: flex;
+}
+
+footer {
+	justify-content: space-around;
+}
+
 /* 
 nav:hover>a{
 	display: flex;
@@ -199,119 +314,10 @@ nav:hover>a{
 /*Media queries*/
 
 @media screen and (max-width: 800px) {
-	.contenedor {
-		flex-direction: column;
-	}
-
-	header {
-		flex-direction: column;
-		padding: 0;
-	}
-
-	#lista {
-		line-height: 2.5;
-		list-style: none;
-		overflow: hidden;
-	}
-
-	header #logo {
-		margin: 10px 0;
-	}
-
-	/* header #logo img {
-		display: inline;
-	} */
-
-	aside {
-		/* flex */
-		flex-direction: row;
-		flex: 0;
-	}
-
-	aside .img-class {
-		flex-grow: 1;
-	}
-
-	.ocultar {
-		display: none;
-	}
-
-	#mostrar {
-		display: flex;
-	}
-
-	/* nav a{
-		display: none;
-	} */
-	nav #menu:hover {
-		display: none;
-	}
+	
 
 }
 
 @media screen and (max-width: 600px) {
-	#cuerpo {
-		font-size: 15px;
-	}
-
-	aside {
-		flex-direction: column;
-	}
-
-	div #logo {
-		width: 50%;
-	}
-
-	header {
-		padding: 30px 10px 10px 10px;
-		margin: 10px 10px 10px 10px;
-	}
-
-	header #logo img {
-		border-radius: 30px;
-		width: 50px;
-		display: list-item;
-	}
-
-	header #menu {
-		width: 50%;
-		/* flex */
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: stretch;
-	}
-
-	#lista {
-		/* flex */
-		display: flex;
-		width: 100%;
-		display: list-item;
-		line-height: 3.5;
-		list-style: none;
-		cursor: pointer;
-		padding-bottom: 10px;
-		overflow: hidden;
-	}
-
-	#lista li a {
-		display: flex;
-	}
-
-	div #mostrar {
-		display: flex;
-		text-align: center;
-		margin: 10px 10px 10px 10px;
-	}
-
-	#lista a:hover {
-		display: block !important;
-	}
-
-	#lista:hover>a {
-		display: flex;
-	}
-
-	footer {
-		justify-content: space-around;
-	}
+	
 }
